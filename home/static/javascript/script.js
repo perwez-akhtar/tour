@@ -2,4 +2,4 @@ window.onload = function () {
 	alert("Hi there!");
 };
 
-console.log("your java")
+console.log("your javascript")

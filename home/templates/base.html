@@ -4,14 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <script src="{% static "javascript/script.js" %}"></script> 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    {% comment %} <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script> {% endcomment %}
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Outad | Tour & Travels</title>
@@ -43,7 +40,7 @@
            
         </div>
     </div>
-
+<hr style="margin-top: 15px; ">
     {% block body %}
   
     
@@ -98,11 +95,9 @@
                 <a href="#"><i class="fa-solid fa-phone"></i> +91 9024720202</a>
               </li>
               <li>
-                <a href="#"><i class="fa-solid fa-envelope"></i> perwrezakhtar29@gmail.com</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i> perwez@gmail.com</a>
               </li>
-              {% comment %} <li>
-                <a href="#">all version</a>
-              </li> {% endcomment %}
+           
             </ul>
           </div>
           <div class="footer-col">

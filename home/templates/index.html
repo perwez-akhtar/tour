@@ -1,34 +1,33 @@
-
-{% extends "base.html" %}
-{% block body %}
-
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    var coll = document.getElementsByClassName('collapsible');
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener('click', function() {
-        this.classList.toggle('active');
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
-    }
-  });
-
-console.log('hi')
-  const navlink=document.querySelectorAll('.nav a');
-      navlink.forEach(navlink=>{
-          navlink.addEventListener('click',()=>{
-              document.querySelector('.active')?.classList.remove()('active');
-              navlink.classList.add('active');
-          });
-      });
-</script>
+{% extends 'base.html' %}
+{% load static %}
+  {% block body %}
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      var coll = document.getElementsByClassName('collapsible')
+      var i
+    
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener('click', function () {
+          this.classList.toggle('active')
+          var content = this.nextElementSibling
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px'
+          }
+        })
+      }
+    })
+    
+    console.log('hi javascript is working in index file')
+    const navlink = document.querySelectorAll('.nav a')
+    navlink.forEach((navlink) => {
+      navlink.addEventListener('click', () => {
+        document.querySelector('.active')?.classList.remove()('.active')
+        navlink.classList.add('.active')
+      })
+    })
+  </script>
 
   <section class="landing-page">
     <div class="row">
@@ -67,22 +66,20 @@ console.log('hi')
     </div>
   </section>
 
- 
-
-    <style>
-        .collapsible {
-          background: #4b46e8;
-          color: white;
-          cursor: pointer;
-          padding: 18px;
-          width: 100%;
-          border: none;
-          text-align: left;
-          outline: none;
-          font-size: 15px;
-          margin: 3px;
-        }
-      </style>
+  <style>
+    .collapsible {
+      background: #4b46e8;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      margin: 3px;
+    }
+  </style>
   <section class="package">
     <h3 class="package-heading">Our Packages</h3>
     <div class="row-package mt-5">
@@ -91,8 +88,7 @@ console.log('hi')
           <img src="/static/images\left.jpg" alt="" />
         </div>
         <div class="box2">
-          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Majestic Himachal Tour
-            <hr ></h3>
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Majestic Himachal Tour<hr /></h3>
           <ul>
             <button type="button" class="collapsible">Day 1 : Arrive at Delhi move to Shimla</button>
             <div class="content">
@@ -108,51 +104,37 @@ console.log('hi')
                 <i class="fa-solid fa-chevron-right"></i>Shimla: - Shimla was the former summer capital of British India, set amidst the snow capped Shivalik Mountains. Which offers some of the most stunning views of the mighty Himalayas. Overnight stay at hotel in Shimla.
               </li>
             </div>
-            <button type="button" class="collapsible">Day 2 : Kufri-Jakhu Excursion
-            </button>
+            <button type="button" class="collapsible">Day 2 : Kufri-Jakhu Excursion</button>
             <div class="content">
-              - After breakfast drive to Kufri Excursion visit
-              <li>
+              - After breakfast drive to Kufri Excursion visit<li>
                 <i class="fa-solid fa-chevron-right"></i>Green valley
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i>Kufri top (Known as Mahasu Peak, one can hire horse to reach the Top)
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Maheshwari Temple
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Mini Zoo (Famous for Snow Leopard)
-        
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Hip Hip Hurry (Place known for Adventure activities like Zip Line, Burma Bridge etc, one can visit here as per choice)
-        
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Jakhoo temple (Temple Dedicated to Lord Hanuman, situated at the highest peak of Shimla)
-        
-        
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
-        
               </li>
             </div>
-            <button type="button" class="collapsible">Day 3 : Shimla to Manali via Kullu Valley
-            </button>
+            <button type="button" class="collapsible">Day 3 : Shimla to Manali via Kullu Valley</button>
             <div class="content">
               <li>
-                <i class="fa-solid fa-chevron-right"></i>After breakfast check out from the hotel & leave for Manali. In evening reach at Manali, Dinner & overnight stay at Manali hotel.
-                On the way sight-seeing like Sundernagar lake, Mandi, Pandoh dam, Vaishno Devi Temple.
+                <i class="fa-solid fa-chevron-right"></i>After breakfast check out from the hotel & leave for Manali. In evening reach at Manali, Dinner & overnight stay at Manali hotel. On the way sight-seeing like Sundernagar lake, Mandi, Pandoh dam, Vaishno Devi Temple.
               </li>
               <li>
                 <i class="fa-solid fa-chevron-right"></i>Breakfast
@@ -179,7 +161,7 @@ console.log('hi')
                 <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
               </li>
             </div>
-              <div class="content">
+            <div class="content">
               <li>
                 <i class="fa-solid fa-chevron-right"></i>Transport Facility
               </li>
@@ -193,120 +175,104 @@ console.log('hi')
                 <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
               </li>
             </div>
-          </ul> </div>
+          </ul>
+        </div>
       </div>
 
       <div class="box">
         <div class="box1">
           <img src="/static/images/pic1.jpg" alt="" />
         </div>
-      <div class="box2">
-        <h3 class="price"><i class="fa-solid fa-location-dot"></i>Majestic Himachal Tour
-          <hr></h3>
-        <ul>
-          <button type="button" class="collapsible">Day 1 : Arrive at Delhi move to Shimla</button>
-          <div class="content">
-            - Arrival At Delhi Railway station/Air Port Meet our company driver move to Shimla<li>
-              <i class="fa-solid fa-chevron-right"></i>On the way Pinjore Garden
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Timber trail
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Sancat Mochan Temple
-            </li>- On reaching Shimla check in hotel, Overnight stay at Shimla..<li>
-              <i class="fa-solid fa-chevron-right"></i>Shimla: - Shimla was the former summer capital of British India, set amidst the snow capped Shivalik Mountains. Which offers some of the most stunning views of the mighty Himalayas. Overnight stay at hotel in Shimla.
-            </li>
-          </div>
-          <button type="button" class="collapsible">Day 2 : Kufri-Jakhu Excursion
-          </button>
-          <div class="content">
-            - After breakfast drive to Kufri Excursion visit
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Green valley
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Kufri top (Known as Mahasu Peak, one can hire horse to reach the Top)
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Maheshwari Temple
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Mini Zoo (Famous for Snow Leopard)
-      
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Hip Hip Hurry (Place known for Adventure activities like Zip Line, Burma Bridge etc, one can visit here as per choice)
-      
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Jakhoo temple (Temple Dedicated to Lord Hanuman, situated at the highest peak of Shimla)
-      
-      
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
-      
-            </li>
-          </div>
-          <button type="button" class="collapsible">Day 3 : Shimla to Manali via Kullu Valley
-          </button>
-          <div class="content">
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>After breakfast check out from the hotel & leave for Manali. In evening reach at Manali, Dinner & overnight stay at Manali hotel.
-              On the way sight-seeing like Sundernagar lake, Mandi, Pandoh dam, Vaishno Devi Temple.
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Breakfast
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
-            </li>
-          </div>
-          <button type="button" class="collapsible">Day 4</button>
-          <div class="content">
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Transport Facility
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Breakfast
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
-            </li>
-          </div>
-      
-         
-      
-          <div class="content">
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Transport Facility
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Breakfast
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
-            </li>
-            <li>
-              <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
-            </li>
-          </div>
-        </ul>
+        <div class="box2">
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Majestic Himachal Tour<hr /></h3>
+          <ul>
+            <button type="button" class="collapsible">Day 1 : Arrive at Delhi move to Shimla</button>
+            <div class="content">
+              - Arrival At Delhi Railway station/Air Port Meet our company driver move to Shimla<li>
+                <i class="fa-solid fa-chevron-right"></i>On the way Pinjore Garden
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Timber trail
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Sancat Mochan Temple
+              </li>- On reaching Shimla check in hotel, Overnight stay at Shimla..<li>
+                <i class="fa-solid fa-chevron-right"></i>Shimla: - Shimla was the former summer capital of British India, set amidst the snow capped Shivalik Mountains. Which offers some of the most stunning views of the mighty Himalayas. Overnight stay at hotel in Shimla.
+              </li>
+            </div>
+            <button type="button" class="collapsible">Day 2 : Kufri-Jakhu Excursion</button>
+            <div class="content">
+              - After breakfast drive to Kufri Excursion visit<li>
+                <i class="fa-solid fa-chevron-right"></i>Green valley
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Kufri top (Known as Mahasu Peak, one can hire horse to reach the Top)
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Maheshwari Temple
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Mini Zoo (Famous for Snow Leopard)
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Hip Hip Hurry (Place known for Adventure activities like Zip Line, Burma Bridge etc, one can visit here as per choice)
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Jakhoo temple (Temple Dedicated to Lord Hanuman, situated at the highest peak of Shimla)
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i> Indra Tourist Park (The Indira Tourist Park is near the Himalayan Nature Park and provides panoramic view of the locations around)
+              </li>
+            </div>
+            <button type="button" class="collapsible">Day 3 : Shimla to Manali via Kullu Valley</button>
+            <div class="content">
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>After breakfast check out from the hotel & leave for Manali. In evening reach at Manali, Dinner & overnight stay at Manali hotel. On the way sight-seeing like Sundernagar lake, Mandi, Pandoh dam, Vaishno Devi Temple.
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Breakfast
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
+              </li>
+            </div>
+            <button type="button" class="collapsible">Day 4</button>
+            <div class="content">
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Transport Facility
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Breakfast
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
+              </li>
+            </div>
+
+            <div class="content">
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Transport Facility
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Breakfast
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>Visit Sight Seeing
+              </li>
+              <li>
+                <i class="fa-solid fa-chevron-right"></i>3 Days 4 Nights
+              </li>
+            </div>
+          </ul>
         </div>
       </div>
       <div class="box">
@@ -314,47 +280,26 @@ console.log('hi')
           <img src="/static/images/right.jpg" alt="" />
         </div>
         <div class="box2">
-          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Rajasthan Tour Packages from Mumbai
-            <hr></h3>
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Rajasthan Tour Packages from Mumbai<hr /></h3>
           <ul>
-            <button type="button" class="collapsible">Day 1 : Arrival at Udaipur
-            </button>
-            <div class="content">
-              - Post your arrival at Udaipur via a flight or train, the Swan Tours representative meet you and transfer you further to the hotel or resort from where you get the enchanting views of the city of lakes.
-            </div>
-            <button type="button" class="collapsible">Day 2 : Udaipur local sightseeing
-            </button>
-            <div class="content">
-              - Enjoy the morning breakfast and start with the sightseeing tour in Udaipur where you will come across the City Palace Gallery that is 400 years old.
-            </div>
-            <button type="button" class="collapsible">Day 3 : Another day in Udaipur
-
-            </button>
-            <div class="content">
-              - Start having breakfast on the third day in the Venice of East. You can count on the visit to the Ranakpur Jain Temples and also the Kumbhalgarh Fort
-              . Later, in the evening you can take a visit to the Shilpgram Craft Gallery near Fatehsagar lake.
-            </div>
+            <button type="button" class="collapsible">Day 1 : Arrival at Udaipur</button>
+            <div class="content">- Post your arrival at Udaipur via a flight or train, the Swan Tours representative meet you and transfer you further to the hotel or resort from where you get the enchanting views of the city of lakes.</div>
+            <button type="button" class="collapsible">Day 2 : Udaipur local sightseeing</button>
+            <div class="content">- Enjoy the morning breakfast and start with the sightseeing tour in Udaipur where you will come across the City Palace Gallery that is 400 years old.</div>
+            <button type="button" class="collapsible">Day 3 : Another day in Udaipur</button>
+            <div class="content">- Start having breakfast on the third day in the Venice of East. You can count on the visit to the Ranakpur Jain Temples and also the Kumbhalgarh Fort . Later, in the evening you can take a visit to the Shilpgram Craft Gallery near Fatehsagar lake.</div>
             <button type="button" class="collapsible">Day 4 : Udaipur - Chittorgarh - Bundi</button>
-            <div class="content">
-              - After having the morning breakfast, you will start with the outing to the amazing community of Bundi by road via Chittorgarh, after your check-out.
-            </div>
-        
-            <button type="button" class="collapsible">Day 5 : Bundi - Jaipur  </button>
-        
-            <div class="content">
-              - Start the day with the morning breakfast and get driven off to the next destination that is Jaipur. that is the capital city of Rajasthan.
-            </div>
-            <button type="button" class="collapsible">Day 6 :Jaipur local sightseeing  </button>
-        
-            <div class="content">
-              - Have an early morning breakfast and start with your visit to the Amer Fort that is 11 km away from the city that had been built with marble and red sandstone.
-            </div>
-            <button type="button" class="collapsible">Day 7 : Departure from Jaipur  </button>
-        
-            <div class="content">
-              - Post having the morning breakfast, you will start with the packing and check-out from the hotel. After you are dropped at the airport, you will head home by bringing an end to the Rajasthan Tour Packages from Mumbai.
+            <div class="content">- After having the morning breakfast, you will start with the outing to the amazing community of Bundi by road via Chittorgarh, after your check-out.</div>
 
-            </div>
+            <button type="button" class="collapsible">Day 5 : Bundi - Jaipur</button>
+
+            <div class="content">- Start the day with the morning breakfast and get driven off to the next destination that is Jaipur. that is the capital city of Rajasthan.</div>
+            <button type="button" class="collapsible">Day 6 :Jaipur local sightseeing</button>
+
+            <div class="content">- Have an early morning breakfast and start with your visit to the Amer Fort that is 11 km away from the city that had been built with marble and red sandstone.</div>
+            <button type="button" class="collapsible">Day 7 : Departure from Jaipur</button>
+
+            <div class="content">- Post having the morning breakfast, you will start with the packing and check-out from the hotel. After you are dropped at the airport, you will head home by bringing an end to the Rajasthan Tour Packages from Mumbai.</div>
           </ul>
         </div>
       </div>
@@ -365,161 +310,72 @@ console.log('hi')
           <img src="/static/images\left.jpg" alt="" />
         </div>
         <div class="box2">
-       
-   {% comment %} Delhi Agra Jaipur Tour  {% endcomment %}
+          {% comment %}Delhi Agra Jaipur Tour{% endcomment %}
 
-<h3 class="price"><i class="fa-solid fa-location-dot"></i>Delhi Agra and Jaipur Golden Triangle Tour
-  <hr ></h3>
-<ul>
-  <button type="button" class="collapsible">Day 1 : New Delh</button>
-  <div class="content">
-    - In the morning between 9:00 -11 am (Pick up from Delhi Hotel and Airport), our representative along with driver takes you for the Delhi Agra Jaipur Tour Package.
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Delhi Agra and Jaipur Golden Triangle Tour<hr /></h3>
+          <ul>
+            <button type="button" class="collapsible">Day 1 : New Delh</button>
+            <div class="content">- In the morning between 9:00 -11 am (Pick up from Delhi Hotel and Airport), our representative along with driver takes you for the Delhi Agra Jaipur Tour Package. Initially, we will visit you to the Red Fort, situated in the old Delhi area. After that, we will take you to the Humanyun Tomb, his 15th-century building was a perfect example of a splendid architecture of that time. (Humanyun Tomb visit only on Monday) Later, we will drive you to the attractively constructed Lotus temple in the shape of the half-open lotus flower. (closed on Monday if you doing this tour on day then out site visit only)</div>
 
-    Initially, we will visit you to the Red Fort, situated in the old Delhi area.
-    After that, we will take you to the Humanyun Tomb, his 15th-century building was a perfect example of a splendid architecture of that time. (Humanyun Tomb visit only on Monday)
-    Later, we will drive you to the attractively constructed Lotus temple in the shape of the half-open lotus flower. (closed on Monday if you doing this tour on day then out site visit only)
-  </div>
-  
-  <button type="button" class="collapsible">Day 2 : New Delhi – Agra
-  </button>
-  <div class="content">
-    - Next morning check out from the hotel, our driver will pick you up around 7:00 am from your Delhi hotel and drive you to the Agra for around 4-5 hours journey for the further journey of your Delhi Agra and Jaipur Golden Triangle Tour.
-    On arrival at Agra Check into the Hotel, after freshening up, our expert guide will join you for your Agra excursion and proceeds you to the globally famous Taj Mahal.
-    After Lunch, our next move is towards the Agra Fort also remarked as the treasure house of Mughals. The fort houses so many buildings include Diwan-i-Am, Nagina Masjid, Diwan-i-Khas and much more.
-  </div>
-  <button type="button" class="collapsible">Day 3 : Agra – Fatehpur Sikri - Jaipur
-  </button>
-  <div class="content">
-    - In the next Morning after breakfast and check out from the Hotel, our chauffeur will take you to visit the Fatehpur Sikri, renowned for the tomb of Saint Sheikh Salim Chisti.
-    On arrival to Jaipur check in to the Hotel, after rest and fresh up, our driver will take you to the visit to Birla Temple and drop you back to the hotel for overnight stay.
-  </div>
-  <button type="button" class="collapsible">Day 4 : Jaipur – Delhi</button>
-  <div class="content">
-    - In the morning after breakfast and check out from the hotel, our driver along with the expert guide will take you to the Amber Fort, a perfect example of Rajput and Muslim style of architecture. You can also enjoy an elephant ride here in Amber Fort.
+            <button type="button" class="collapsible">Day 2 : New Delhi – Agra</button>
+            <div class="content">- Next morning check out from the hotel, our driver will pick you up around 7:00 am from your Delhi hotel and drive you to the Agra for around 4-5 hours journey for the further journey of your Delhi Agra and Jaipur Golden Triangle Tour. On arrival at Agra Check into the Hotel, after freshening up, our expert guide will join you for your Agra excursion and proceeds you to the globally famous Taj Mahal. After Lunch, our next move is towards the Agra Fort also remarked as the treasure house of Mughals. The fort houses so many buildings include Diwan-i-Am, Nagina Masjid, Diwan-i-Khas and much more.</div>
+            <button type="button" class="collapsible">Day 3 : Agra – Fatehpur Sikri - Jaipur</button>
+            <div class="content">- In the next Morning after breakfast and check out from the Hotel, our chauffeur will take you to visit the Fatehpur Sikri, renowned for the tomb of Saint Sheikh Salim Chisti. On arrival to Jaipur check in to the Hotel, after rest and fresh up, our driver will take you to the visit to Birla Temple and drop you back to the hotel for overnight stay.</div>
+            <button type="button" class="collapsible">Day 4 : Jaipur – Delhi</button>
+            <div class="content">- In the morning after breakfast and check out from the hotel, our driver along with the expert guide will take you to the Amber Fort, a perfect example of Rajput and Muslim style of architecture. You can also enjoy an elephant ride here in Amber Fort. After that, you will be driven towards the Jal Mahal, placed in a midst of a Man Sagar lake. The panoramic view of the Palace makes it the most romantic place of Jaipur. Here, you can have fun on Camel. Afterward, our next move is towards the Hawa Mahal, the most iconic place of Jaipur.</div>
+          </ul>
 
-    After that, you will be driven towards the Jal Mahal, placed in a midst of a Man Sagar lake. The panoramic view of the Palace makes it the most romantic place of Jaipur. Here, you can have fun on Camel.
-    Afterward, our next move is towards the Hawa Mahal, the most iconic place of Jaipur.
-  </div>
- 
-</ul>
-
-{% comment %} Delhi-Bihar Tour {% endcomment %}
-       
+          {% comment %}Delhi-Bihar Tour{% endcomment %}
+        </div>
       </div>
-    </div>
       <div class="box">
         <div class="box1">
           <img src="/static/images/pic1.jpg" alt="" />
         </div>
         <div class="box2">
-          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Gems of Buddhism Tour
-            <hr></h3>
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Gems of Buddhism Tour<hr /></h3>
           <ul>
             <button type="button" class="collapsible">Day 1 : Arrive at Delhi</button>
-            <div class="content">
-              - The spiritual tour starts from Delhi. Our representative will pick you up from the airport in an air condition car and drop you at the hotel. Overnight at hotel in Delhi.
-              
-            
-            </div>
-            <button type="button" class="collapsible">Day 2 : Delhi Sightseeing | Delhi- Bodhgaya [By Evening Train]
-
-            </button>
-            <div class="content">
-              - The next day after breakfast at the hotel, we take you to explore various places. Start with Rajgir, which is a site of great sanctity and significance to Buddhists.
-              Other places to see at Rajgir include Gridhkutta Hill, Bimbisar jail & Ajatashatru,s Fort. After Rajgir, we will take you to Nalanda. Famous for housing oldest Universities of the World & the International Centre for
-              Buddhist Studies it takes 15 minutes drive to reach there. The day ends with a drive back to Bodhgaya.
-             
-            </div>
-            <button type="button" class="collapsible">Day 3 : Arrival Bodhgaya
-
-            </button>
-            <div class="content">
-              - Check-in at the hotel and later, we will take you to explore the Mahabodhi Temple, which is known for being a spot where Buddha meditated and attained enlightenment. From here we proceed to Sujata Village.
-              After this, we take you to Niranjana River and other various International monasteries.>
-            </div>
-            <button type="button" class="collapsible">Day 4: Bodhgaya | Rajgir | Nalanda
-            </button>
-            <div class="content">
-              - The next day after breakfast at the hotel, we take you to explore various places. Start with Rajgir, which is a site of great sanctity and significance to Buddhists.
-              Other places to see at Rajgir include Gridhkutta Hill, Bimbisar jail & Ajatashatru,s Fort. After Rajgir, we will take you to Nalanda. Famous for housing oldest Universities of the World & the International Centre for
-              Buddhist Studies it takes 15 minutes drive to reach there. The day ends with a drive back to Bodhgaya.
-             
-            </div>
-            <button type="button" class="collapsible">Day 5 : Bodhgaya- Varanasi [250 Kms/approx. 5½ Hrs]
-            </button>
-            <div class="content">
-              - On the fifth day after breakfast at the hotel, we drive you to Varanasi. Upon reaching check-in at the hotel and freshen up as we proceed for a trip to Sarnath. 
-              You will get to explore its other famous Buddhist site, such as Dhamekh Stupa, Deer Park (Closed on Friday) from where you can proceed back to Varanasi.
-             
-            </div>
-            <button type="button" class="collapsible">Day 5 : Bodhgaya- Varanasi [250 Kms/approx. 5½ Hrs]
-            </button>
-            <div class="content">
-              - On the fifth day after breakfast at the hotel, we drive you to Varanasi. Upon reaching check-in at the hotel and freshen up as we proceed for a trip to Sarnath. 
-              You will get to explore its other famous Buddhist site, such as Dhamekh Stupa, Deer Park (Closed on Friday) from where you can proceed back to Varanasi.
-             
-            </div>
-            <button type="button" class="collapsible">Day 6 : Varanasi- Delhi </button>
-            <div class="content">
-              - Next day between 5:30 to 6:00 Am we take you for an early morning boat ride on the holy river Ganges. Relish the morning scenes and witness the rituals performed on the various Ghats as you cruise through the river. After the boat ride, proceed back to the hotel for a breakfast and then leave for Varanasi sightseeing tour. The sites you will cover include BHU, the Asia largest residential university, Birla Temple (Vishwanath Temple), Bharat Kala Bhawan Museum, Monkey Temple, Durga Temple, and Bharat Mata Temple. Later in the evening proceed for a Ganga Aarti to witness the ceremonial prayers offered to the Ganga river.
-             
-            </div>
+            <div class="content">- The spiritual tour starts from Delhi. Our representative will pick you up from the airport in an air condition car and drop you at the hotel. Overnight at hotel in Delhi.</div>
+            <button type="button" class="collapsible">Day 2 : Delhi Sightseeing | Delhi- Bodhgaya [By Evening Train]</button>
+            <div class="content">- The next day after breakfast at the hotel, we take you to explore various places. Start with Rajgir, which is a site of great sanctity and significance to Buddhists. Other places to see at Rajgir include Gridhkutta Hill, Bimbisar jail & Ajatashatru,s Fort. After Rajgir, we will take you to Nalanda. Famous for housing oldest Universities of the World & the International Centre for Buddhist Studies it takes 15 minutes drive to reach there. The day ends with a drive back to Bodhgaya.</div>
+            <button type="button" class="collapsible">Day 3 : Arrival Bodhgaya</button>
+            <div class="content">- Check-in at the hotel and later, we will take you to explore the Mahabodhi Temple, which is known for being a spot where Buddha meditated and attained enlightenment. From here we proceed to Sujata Village. After this, we take you to Niranjana River and other various International monasteries.></div>
+            <button type="button" class="collapsible">Day 4: Bodhgaya | Rajgir | Nalanda</button>
+            <div class="content">- The next day after breakfast at the hotel, we take you to explore various places. Start with Rajgir, which is a site of great sanctity and significance to Buddhists. Other places to see at Rajgir include Gridhkutta Hill, Bimbisar jail & Ajatashatru,s Fort. After Rajgir, we will take you to Nalanda. Famous for housing oldest Universities of the World & the International Centre for Buddhist Studies it takes 15 minutes drive to reach there. The day ends with a drive back to Bodhgaya.</div>
+            <button type="button" class="collapsible">Day 5 : Bodhgaya- Varanasi [250 Kms/approx. 5½ Hrs]</button>
+            <div class="content">- On the fifth day after breakfast at the hotel, we drive you to Varanasi. Upon reaching check-in at the hotel and freshen up as we proceed for a trip to Sarnath. You will get to explore its other famous Buddhist site, such as Dhamekh Stupa, Deer Park (Closed on Friday) from where you can proceed back to Varanasi.</div>
+            <button type="button" class="collapsible">Day 5 : Bodhgaya- Varanasi [250 Kms/approx. 5½ Hrs]</button>
+            <div class="content">- On the fifth day after breakfast at the hotel, we drive you to Varanasi. Upon reaching check-in at the hotel and freshen up as we proceed for a trip to Sarnath. You will get to explore its other famous Buddhist site, such as Dhamekh Stupa, Deer Park (Closed on Friday) from where you can proceed back to Varanasi.</div>
+            <button type="button" class="collapsible">Day 6 : Varanasi- Delhi</button>
+            <div class="content">- Next day between 5:30 to 6:00 Am we take you for an early morning boat ride on the holy river Ganges. Relish the morning scenes and witness the rituals performed on the various Ghats as you cruise through the river. After the boat ride, proceed back to the hotel for a breakfast and then leave for Varanasi sightseeing tour. The sites you will cover include BHU, the Asia largest residential university, Birla Temple (Vishwanath Temple), Bharat Kala Bhawan Museum, Monkey Temple, Durga Temple, and Bharat Mata Temple. Later in the evening proceed for a Ganga Aarti to witness the ceremonial prayers offered to the Ganga river.</div>
             <button type="button" class="collapsible">Day 7 : Delhi</button>
-            <div class="content">
-              - Later we take you for a Delhi sightseeing that include prominent places like India Gate, which is a 42 m high archway built to honor the Indian. After that, drive past the Red Fort, Parliament House, the President House (Rashtrapati Bhawan). The next visit is Raj Ghat, which is a memorial dedicated to Mahatma Gandhi. Later we take you to the Lotus Temple (closed on Monday, outside visit).
-             
-            </div>
-
-        
-           
-        
-           
+            <div class="content">- Later we take you for a Delhi sightseeing that include prominent places like India Gate, which is a 42 m high archway built to honor the Indian. After that, drive past the Red Fort, Parliament House, the President House (Rashtrapati Bhawan). The next visit is Raj Ghat, which is a memorial dedicated to Mahatma Gandhi. Later we take you to the Lotus Temple (closed on Monday, outside visit).</div>
           </ul>
-
         </div>
       </div>
 
-      {% comment %} Kerala Tour {% endcomment %}
+      {% comment %}Kerala Tour{% endcomment %}
       <div class="box">
         <div class="box1">
           <img src="/static/images/right.jpg" alt="" />
         </div>
         <div class="box2">
-          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Beautiful Tamilnadu Tour
-            <hr></h3>
+          <h3 class="price"><i class="fa-solid fa-location-dot"></i>Beautiful Tamilnadu Tour<hr /></h3>
           <ul>
-            <button type="button" class="collapsible">Day 1 :  Chennai - Kanchipuram - Mahabalipuram</button>
-            <div class="content">
-              - Our driver will pick you up from Chennai airport or railway station or Hotel between 07:00 – 13:00 PM, and drive to the Kanchipuram on arrival English-speaking guide will join and starts your heritage temples tour of Tamilnadu from Ekambareswara Temple visit, devoted to Lord Shiva
-            </div>
-            <button type="button" class="collapsible">Day 2 : Mahabalipuram – Tanjore
-            </button>
-            <div class="content">
-              - Next day after breakfast check out from the Mahabalipuram hotel. Then, starts your drive of around 5 hrs to Tanjore also familiar as ‘Rice Bowl of Tamil Nadu’, on arrival Check into the Hotel. The place is renowned for the Brahadeeswarar Temple.
-            </div>
-            <button type="button" class="collapsible">Day 3 : Tanjore – Madurai 
-            </button>
-            <div class="content">
-              - Morning after breakfast check out from the hotel and starts the drive to Madurai of around 3 hrs, on arrival Check Into the Hotel, after rest and refresh leaves towards the gargantuan Meenakshi-Sundareshvara temple devoted to goddess Parvati.
-              This Tamilnadu Heritage Tour Package also takes you to visit the Thirumalai Nayak’s palace and Gandhi Museum that, will you visit while at Madurai.
-            </div>
-            <button type="button" class="collapsible">Day 4: Madurai – Rameshwaram – Madurai </button>
-            <div class="content">
-              - Morning after breakfast leaves for the day excursion to Rameshwaram by completing traveling time of around 3 hours 15 min. Here, you can explore the ancient Ramanathaswamy Temple devoted to the almighty Lord Shiva.
-            </div>
+            <button type="button" class="collapsible">Day 1 : Chennai - Kanchipuram - Mahabalipuram</button>
+            <div class="content">- Our driver will pick you up from Chennai airport or railway station or Hotel between 07:00 – 13:00 PM, and drive to the Kanchipuram on arrival English-speaking guide will join and starts your heritage temples tour of Tamilnadu from Ekambareswara Temple visit, devoted to Lord Shiva</div>
+            <button type="button" class="collapsible">Day 2 : Mahabalipuram – Tanjore</button>
+            <div class="content">- Next day after breakfast check out from the Mahabalipuram hotel. Then, starts your drive of around 5 hrs to Tanjore also familiar as ‘Rice Bowl of Tamil Nadu’, on arrival Check into the Hotel. The place is renowned for the Brahadeeswarar Temple.</div>
+            <button type="button" class="collapsible">Day 3 : Tanjore – Madurai</button>
+            <div class="content">- Morning after breakfast check out from the hotel and starts the drive to Madurai of around 3 hrs, on arrival Check Into the Hotel, after rest and refresh leaves towards the gargantuan Meenakshi-Sundareshvara temple devoted to goddess Parvati. This Tamilnadu Heritage Tour Package also takes you to visit the Thirumalai Nayak’s palace and Gandhi Museum that, will you visit while at Madurai.</div>
+            <button type="button" class="collapsible">Day 4: Madurai – Rameshwaram – Madurai</button>
+            <div class="content">- Morning after breakfast leaves for the day excursion to Rameshwaram by completing traveling time of around 3 hours 15 min. Here, you can explore the ancient Ramanathaswamy Temple devoted to the almighty Lord Shiva.</div>
             <button type="button" class="collapsible">Day 5: Madurai - Kanyakumari</button>
-            <div class="content">
-              - First, we stop over Kanyakumari temple devoted to the virgin goddess Kanyakumari. The other places to visit in the city are Vivekananda Rock Memorial, Suchindrum Padmanabhapuram Palace, and Thiruvalluvar statue. In the evening, appreciate the fascination of a sunset view.
-            </div>
+            <div class="content">- First, we stop over Kanyakumari temple devoted to the virgin goddess Kanyakumari. The other places to visit in the city are Vivekananda Rock Memorial, Suchindrum Padmanabhapuram Palace, and Thiruvalluvar statue. In the evening, appreciate the fascination of a sunset view.</div>
             <button type="button" class="collapsible">Day 6: Kanyakumari – Trivandrum</button>
-            <div class="content">
-              - Go to enjoy the charm of the early morning sunrise, later back to the Hotel and after breakfast check out from the Hotel and drive to Trivandrum Airport for your onward journey. Your Tamilnadu Heritage Tour  going to end with dropping you back to the Kovalam Hotel or any nearby Railway station.
-            </div>
-        
-           
-        
+            <div class="content">- Go to enjoy the charm of the early morning sunrise, later back to the Hotel and after breakfast check out from the Hotel and drive to Trivandrum Airport for your onward journey. Your Tamilnadu Heritage Tour going to end with dropping you back to the Kovalam Hotel or any nearby Railway station.</div>
           </ul>
-
         </div>
       </div>
     </div>
@@ -560,6 +416,4 @@ console.log('hi')
       </div>
     </section>
   </section>
-
-  
 {% endblock %}

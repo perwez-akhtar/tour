@@ -169,10 +169,6 @@
     width: 100%;
     height: 100%;
 }
-.box1:hover{
-    /* transform: scale(1.2); */
-
-}
 
 .box2 {
     
@@ -338,6 +334,7 @@ ul {
 }
 .service-div h1,
 .service-div h2 {
+    color: #000;
     background-color: transparent;
 }
 
